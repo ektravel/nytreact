@@ -15,7 +15,9 @@ const ArticleSchema = new Schema({
     date: { type: Date, default: Date.now }
   });
   
+  //Create the Article model with mongoose
   const Article = mongoose.model("Article", ArticleSchema);
   
+  //Export the model
   module.exports = Article;
   
