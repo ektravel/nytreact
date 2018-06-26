@@ -1,0 +1,21 @@
+//Using mongoose, create an Article schema and model
+const mongoose = require("mongoose");
+//Reference to the Schema constructor
+const Schema = mongoose.Schema;
+
+//Using the Schema constructor, create a new object
+const ArticleSchema = new Schema({
+    //Title of the stored article from nytimes.com
+    title: { type: String, required: true },
+    //Author of the stored article 
+    author: { type: String, required: true },
+    //URL of the article on nytimes.com
+    url:{type: String, required: true},
+    //publish date and time of the article
+    date: { type: Date, default: Date.now }
+  });
+  
+  const Article = mongoose.model("Article", ArticleSchema);
+  
+  module.exports = Article;
+  
