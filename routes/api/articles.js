@@ -3,14 +3,15 @@ const articleController = require("../../controllers/articleController");
 
 // Matches with "/api/articles"
 router.route("/")
+//query MongoDB for all saved article
   .get(articleController.findAll)
+//save an article to the database
   .post(articleController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/articles/:id"
 router
   .route("/:id")
-  .get(booksController.findById)
-  .put(booksController.update)
-  .delete(booksController.remove);
+//delete a saved article in the database
+  .delete(articleController.remove);
 
 module.exports = router;
