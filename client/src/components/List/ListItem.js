@@ -8,6 +8,6 @@ export const ListItem = props => (
         <span>
             {props.children}
         </span>
-        <p>Date Published: {propr.date}</p>
+        <p>Date Published: {props.date}</p>
     </li>
 );
