@@ -7,8 +7,6 @@ const Schema = mongoose.Schema;
 const ArticleSchema = new Schema({
     //Title of the stored article from nytimes.com
     title: { type: String, required: true },
-    //Author of the stored article 
-    author: { type: String, required: true },
     //URL of the article on nytimes.com
     url:{type: String, required: true},
     //publish date and time of the article
